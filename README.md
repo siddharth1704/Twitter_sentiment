@@ -46,16 +46,20 @@ Now for the model I have first downloaded tweets using tweepy and save them in c
 And i have manually given sentiment to these 200 tweets by reading them<br />
 0 is a negative tweet and 1 is a positive tweet<br />
   **Data Cleaning**<br />
-Later on after saving and editing them I have applied data cleaning <br />
-I have removed stopwords and punctiouns using spacy and used my custom<br />
-data cleaning function to remove #,@,emojis,Urls etc<br/>
+  Later on after saving and editing them I have applied data cleaning <br />
+  I have removed stopwords and punctiouns using spacy and used my custom<br />
+  data cleaning function to remove #,@,emojis,Urls etc<br/>
   **Tokenizing**<br />
-I have tokenized them using tokenizer and added padding to them<br />
-So that they have equal length <br />
-  **Word2vec**<br />
-Now i have used the conccept of vectorization for word embedings<br />
-I have taken glove file which is availabe on Kaggle as dictionary<br />
-Using this file i have created vectors for differnt words and embeded them<br />
+Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Hence, tokenization can be broadly classified into 3 types – word, character, and subword (n-gram characters) tokenization.<br />
+<br />
+For example, consider the sentence: “Never give up”.<br />
+<br />
+The most common way of forming tokens is based on space. Assuming space as a delimiter, the tokenization of the sentence results in 3 tokens – Never-give-up. As each token is a word, it becomes an example of Word tokenization.<br />
+You can read more  [here](https://www.analyticsvidhya.com/blog/2020/05/what-is-tokenization-nlp/)<br />
+<br />
+**Word2vec**<br />
+Word2vec is a technique for natural language processing. The word2vec algorithm uses a neural network model to learn word associations from a large corpus of text. Once trained, such a model can detect synonymous words or suggest additional words for a partial sentence. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector. The vectors are chosen carefully such that a simple mathematical function (the cosine similarity between the vectors) indicates the level of semantic similarity between the words represented by those vectors.
+![alt text](https://i.stack.imgur.com/N81kM.png)<br />
  **About the model**<br />
  I have used 4 layers in my nerual network model.First I have used <br />
  a basic nembeding layer that i made using word2vec after that I have used <br />
